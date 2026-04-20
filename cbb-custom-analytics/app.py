@@ -4,6 +4,11 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+with open("FMLogo.svg", "r", encoding="utf-8") as f:
+    svg = f.read()
+
+st.image(svg, width=180)
+
 from model import simulate_matchup
 
 st.set_page_config(page_title="College Basketball Analytics Beta", layout="wide")
